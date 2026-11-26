@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Teste do App - Super Acertos</title>
+  <link rel="manifest" href="/manifest.json">
+  <style>
+    body { font-family: Arial, sans-serif; background: #0b1220; color: #fff; padding: 20px; max-width: 700px; margin: auto; }
+    h1 { color: #facc15; font-size: 24px; }
+    .item { background: #111827; border-radius: 10px; padding: 12px 14px; margin: 10px 0; line-height: 1.5; font-size: 15px; }
+    .ok { border-left: 5px solid #22c55e; }
+    .erro { border-left: 5px solid #ef4444; }
+    .aviso { border-left: 5px solid #f59e0b; }
+    small { color: #cbd5e1; display: block; }
+    button { background: #facc15; border: none; padding: 14px 22px; border-radius: 10px; font-weight: bold; font-size: 16px; margin-top: 15px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Teste do aplicativo</h1>
+  <p>Esta página verifica o que está impedindo (ou permitindo) a instalação.</p>
+  <div id="resultado"></div>
+  <button id="btn" type="button" style="display:none">📲 Instalar agora</button>
+
+<script>
+  var box = document.getElementById('resultado');
+  var evento = null;
+
+  function add(tipo, texto, detalhe) {
+    var d = document.createElement('div');
+    d.className = 'item ' + tipo;
+    d.innerHTML = (tipo === 'ok' ? '✅ ' : tipo === 'erro' ? '❌ ' : '⚠️ ') + texto +
+      (detalhe ? '<small>' + detalhe + '</small>' : '');
+    box.appendChild(d);
+  }
+
+  window.addEventListener('beforeinstallprompt', function (e) {
+    e.preventDefault();
+    evento = e;
+    add('ok', 'O Chrome LIBEROU a instalação automática.', 'O botão abaixo vai instalar o app.');
+    document.getElementById('btn').style.display = 'inline-block';
+  });
+
+  document.getElementById('btn').addEventListener('click', function () {
+    if (evento) { evento.prompt(); }
+  });
+
+  // 1) HTTPS
+  if (location.protocol === 'https:') add('ok', 'Site em HTTPS.');
+  else add('erro', 'O site não está em HTTPS.', 'Ative "Enforce HTTPS" nas configurações do GitHub Pages.');
+
+  // 2) Ja instalado?
+  if (window.matchMedia('(display-mode: standalone)').matches) {
+    add('aviso', 'Você abriu esta página dentro do app já instalado.', 'Abra no navegador normal para testar.');
+  }
+
+  // 3) Manifest
+  fetch('/manifest.json', { cache: 'no-store' })
+    .then(function (r) {
+      if (!r.ok) throw new Error('Status ' + r.status);
+      return r.json();
+    })
+    .then(function (m) {
+      add('ok', 'manifest.json encontrado e válido.');
+
+      if (m.start_url) add('ok', 'start_url: ' + m.start_url);
+      else add('erro', 'Falta o campo start_url no manifest.');
+
+      if (m.display === 'standalone' || m.display === 'fullscreen') add('ok', 'display: ' + m.display);
+      else add('erro', 'O campo display precisa ser "standalone".');
+
+      if (m.name || m.short_name) add('ok', 'Nome do app: ' + (m.name || m.short_name));
+      else add('erro', 'Falta name ou short_name no manifest.');
+
+      var icones = m.icons || [];
+      if (!icones.length) add('erro', 'Nenhum ícone declarado no manifest.');
+
+      icones.forEach(function (ic) {
+        var img = new Image();
+        img.onload = function () {
+          add('ok', 'Ícone carregou: ' + ic.src, 'Tamanho real: ' + img.naturalWidth + 'x' + img.naturalHeight + ' (declarado ' + ic.sizes + ')');
+        };
+        img.onerror = function () {
+          add('erro', 'Ícone NÃO encontrado: ' + ic.src, 'Envie esse arquivo para a raiz do repositório, com o nome exato.');
+        };
+        img.src = ic.src + '?t=' + Date.now();
+      });
+
+      // start_url abre?
+      if (m.start_url) {
+        fetch(m.start_url, { cache: 'no-store' }).then(function (r) {
+          if (r.ok) add('ok', 'A página inicial do app abre (' + m.start_url + ').');
+          else add('erro', 'A página inicial do app não abre: ' + m.start_url, 'Status ' + r.status + '. Confira se o arquivo existe no repositório.');
+        }).catch(function () {
+          add('erro', 'Falha ao abrir ' + m.start_url);
+        });
+      }
+    })
+    .catch(function (e) {
+      add('erro', 'manifest.json NÃO foi encontrado ou está com erro.', String(e) + '. Confira se o arquivo existe na raiz e se o JSON está correto (vírgulas e aspas).');
+    });
+
+  // 4) Service worker
+  if (!('serviceWorker' in navigator)) {
+    add('erro', 'Este navegador não suporta service worker.');
+  } else {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then(function (reg) {
+        add('ok', 'service-worker.js registrado com sucesso.', 'Escopo: ' + reg.scope);
+      })
+      .catch(function (e) {
+        add('erro', 'service-worker.js com problema.', String(e) + '. Confira se o arquivo existe na raiz e se foi copiado completo.');
+      });
+  }
+
+  // 5) Resultado final
+  setTimeout(function () {
+    if (!evento) {
+      add('aviso', 'O Chrome ainda não liberou a instalação.', 'Se tudo acima estiver ✅, feche o Chrome, abra de novo e acesse esta página. Se aparecer ❌, corrija o item indicado.');
+    }
+  }, 4000);
+</script>
+</body>
+</html>
