@@ -10,118 +10,62 @@
 
   gtag('config', 'G-SLK4PD13WH');
 </script>
-  <!-- =========================
-       CONFIGURAÇÕES SEO
-  ========================== -->
 
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <title>SUPER ACERTOS - 30% de bônus 1° recarga</title>
 
-  <title>
-    SUPER ACERTOS - 30% de bônus 1° recarga
-  </title>
-
-  <meta
-    name="description"
-    content="A SUPERACERTOS vem com uma ótima cotação para milhar, centena, dezena e grupo, além de bônus exclusivos e plataforma simplificada para loterias."
-  >
-
-  <meta
-    name="keywords"
-    content="Superacertos, Acertosclub loteria, milhar, centena, dezena, grupo, banca de loteria, cotação da milhar, bônus loteria, jogo do bicho"
-  >
-
-  <meta
-    name="robots"
-    content="index, follow"
-  >
-
+  <meta name="description" content="A SUPERACERTOS vem com uma ótima cotação para milhar, centena, dezena e grupo, além de bônus exclusivos e plataforma simplificada para loterias.">
+  <meta name="keywords" content="Superacertos, Acertosclub loteria, milhar, centena, dezena, grupo, banca de loteria, cotação da milhar, bônus loteria, jogo do bicho">
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://superacertos.com.br/" />
 
-
   <!-- =========================
-       OPEN GRAPH
+       PWA (APLICATIVO INSTALAVEL)
   ========================== -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#bb9f01">
+  <link rel="icon" type="image/png" href="/icon-192.png">
+  <link rel="apple-touch-icon" href="/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Super Acertos">
 
-  <meta
-    property="og:title"
-    content="Superacertos | Loterias e Bônus Exclusivos"
-  >
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="Superacertos | Loterias e Bônus Exclusivos">
+  <meta property="og:description" content="Ganhe bônus, aproveite altas cotações e jogue nas melhores bancas do Brasil.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://superacertos.com.br/">
+  <meta property="og:image" content="https://superacertos.com.br/icon-512.png">
 
-  <meta
-    property="og:description"
-    content="Ganhe bônus, aproveite altas cotações e jogue nas melhores bancas do Brasil."
-  >
-
-  <meta
-    property="og:type"
-    content="website"
-  >
-
-  <meta
-    property="og:url"
-    content="https://app.superacertos.club/pr/Vn9qOT6U"
-  >
-
-
-  <!-- =========================
-       SCHEMA
-  ========================== -->
-
+  <!-- SCHEMA -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Super Bancas",
-    "url": "https://vaidarboa.vip/",
-    "logo": "https://superbancas.com.br/logo.png"
+    "name": "Super Acertos",
+    "url": "https://superacertos.com.br/",
+    "logo": "https://superacertos.com.br/icon-512.png"
   }
   </script>
-
-
-  <!-- ==================================================
-       GOOGLE TAG MANAGER - TAG 1
-       COLOCADA DENTRO DO <HEAD>
-       ID: GTM-NBHWRN3L
-  =================================================== -->
 
   <!-- Google Tag Manager -->
   <script>
     (function(w,d,s,l,i){
       w[l]=w[l]||[];
-      w[l].push({
-        'gtm.start': new Date().getTime(),
-        event:'gtm.js'
-      });
-
+      w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
       var f=d.getElementsByTagName(s)[0],
           j=d.createElement(s),
           dl=l!='dataLayer'?'&l='+l:'';
-
       j.async=true;
-
-      j.src=
-        'https://www.googletagmanager.com/gtm.js?id='
-        + i
-        + dl;
-
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
       f.parentNode.insertBefore(j,f);
-
     })(window,document,'script','dataLayer','GTM-NBHWRN3L');
   </script>
   <!-- End Google Tag Manager -->
 
-
-  <!-- =========================
-       ESTILOS
-  ========================== -->
-
   <style>
-
     :root {
       --primary: #bb9f01;
       --secondary: #a19f0f;
@@ -130,18 +74,9 @@
       --blue: #cec107;
     }
 
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: Arial, sans-serif;
@@ -150,572 +85,246 @@
       overflow-x: hidden;
     }
 
+    .container { width: 100%; max-width: 1200px; margin: auto; padding: 0 20px; }
 
-    .container {
-      width: 100%;
-      max-width: 1200px;
-      margin: auto;
-      padding: 0 20px;
-    }
-
-
-    /* =========================
-       HEADER
-    ========================== */
-
+    /* HEADER */
     header {
-      position: sticky;
-      top: 0;
-      z-index: 999;
-
+      position: sticky; top: 0; z-index: 999;
       background: rgba(2, 6, 23, 0.95);
-
-      border-bottom:
-        1px solid rgba(255,255,255,0.1);
-
+      border-bottom: 1px solid rgba(255,255,255,0.1);
       backdrop-filter: blur(10px);
     }
 
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .logo { font-size: 30px; font-weight: bold; color: var(--primary); }
 
-      padding: 20px 0;
-    }
+    .menu { display: flex; gap: 25px; }
 
+    .menu a { color: white; text-decoration: none; font-weight: bold; transition: 0.3s; }
 
-    .logo {
-      font-size: 30px;
-      font-weight: bold;
+    .menu a:hover { color: var(--primary); }
 
-      color: var(--primary);
-    }
-
-
-    .menu {
-      display: flex;
-      gap: 25px;
-    }
-
-
-    .menu a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-
-      transition: 0.3s;
-    }
-
-
-    .menu a:hover {
-      color: var(--primary);
-    }
-
-
-    /* =========================
-       HERO
-    ========================== */
-
+    /* HERO */
     .hero {
       min-height: 100vh;
-
       display: flex;
       align-items: center;
-
       background:
-        linear-gradient(
-          rgba(2,6,23,0.7),
-          rgba(2,6,23,0.8)
-        ),
-        url(
-          'https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1974&auto=format&fit=crop'
-        )
+        linear-gradient(rgba(2,6,23,0.7), rgba(2,6,23,0.8)),
+        url('https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1974&auto=format&fit=crop')
         center/cover;
-
       text-align: center;
     }
 
+    .hero h1 { font-size: 64px; line-height: 1.1; margin-bottom: 25px; color: var(--primary); }
 
-    .hero h1 {
-      font-size: 64px;
-      line-height: 1.1;
-
-      margin-bottom: 25px;
-
-      color: var(--primary);
-    }
-
-
-    .hero p {
-      font-size: 22px;
-
-      max-width: 850px;
-
-      margin: auto;
-
-      color: #e2e8f0;
-    }
-
+    .hero p { font-size: 22px; max-width: 850px; margin: auto; color: #e2e8f0; }
 
     .btn {
       display: inline-block;
-
       margin-top: 35px;
-
-      background:
-        linear-gradient(
-          45deg,
-          #facc15,
-          #f59e0b
-        );
-
+      background: linear-gradient(45deg, #facc15, #f59e0b);
       color: #000;
-
       padding: 16px 35px;
-
       border-radius: 12px;
-
       font-weight: bold;
-
       text-decoration: none;
-
       font-size: 18px;
-
       transition: 0.3s;
     }
 
+    .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(250, 204, 21, 0.4); }
 
-    .btn:hover {
-      transform: translateY(-3px);
+    /* SECOES */
+    section { padding: 90px 0; }
 
-      box-shadow:
-        0 10px 25px
-        rgba(250, 204, 21, 0.4);
-    }
+    h2 { font-size: 42px; margin-bottom: 20px; text-align: center; color: var(--primary); }
 
+    .section-text { text-align: center; max-width: 900px; margin: auto; color: #cbd5e1; font-size: 18px; }
 
-    /* =========================
-       SEÇÕES
-    ========================== */
-
-    section {
-      padding: 90px 0;
-    }
-
-
-    h2 {
-      font-size: 42px;
-
-      margin-bottom: 20px;
-
-      text-align: center;
-
-      color: var(--primary);
-    }
-
-
-    .section-text {
-      text-align: center;
-
-      max-width: 900px;
-
-      margin: auto;
-
-      color: #cbd5e1;
-
-      font-size: 18px;
-    }
-
-
-    /* =========================
-       GRID
-    ========================== */
-
+    /* GRID */
     .grid {
       display: grid;
-
-      grid-template-columns:
-        repeat(
-          auto-fit,
-          minmax(240px, 1fr)
-        );
-
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 25px;
-
       margin-top: 50px;
     }
 
-
-    /* =========================
-       CARDS
-    ========================== */
-
+    /* CARDS */
     .card {
-      background:
-        linear-gradient(
-          180deg,
-          #0f172a,
-          #111827
-        );
-
+      background: linear-gradient(180deg, #0f172a, #111827);
       border-radius: 18px;
-
       padding: 35px;
-
-      border:
-        1px solid rgba(255,255,255,0.08);
-
+      border: 1px solid rgba(255,255,255,0.08);
       transition: 0.3s;
-
       text-align: center;
     }
 
+    .card:hover { transform: translateY(-5px); border-color: rgba(250,204,21,0.5); }
 
-    .card:hover {
-      transform: translateY(-5px);
+    .card h3 { font-size: 28px; color: var(--primary); margin-bottom: 15px; }
 
-      border-color:
-        rgba(250,204,21,0.5);
-    }
+    .card p { font-size: 20px; color: white; }
 
+    /* BONUS */
+    .bonus { background: linear-gradient(135deg, #1e3a8a, #020617); }
 
-    .card h3 {
-      font-size: 28px;
-
-      color: var(--primary);
-
-      margin-bottom: 15px;
-    }
-
-
-    .card p {
-      font-size: 20px;
-
-      color: white;
-    }
-
-
-    /* =========================
-       BONUS
-    ========================== */
-
-    .bonus {
-      background:
-        linear-gradient(
-          135deg,
-          #1e3a8a,
-          #020617
-        );
-    }
-
-
-    /* =========================
-       BANCAS
-    ========================== */
-
-    .bancas-grid {
-      margin-top: 50px;
-    }
-
+    /* BANCAS */
+    .bancas-grid { margin-top: 50px; }
 
     .banca-link {
       text-decoration: none;
-
       color: white;
-
       transition: 0.35s;
-
       position: relative;
-
       overflow: hidden;
-
       min-height: 280px;
-
       display: flex;
-
       flex-direction: column;
-
       justify-content: space-between;
-
-      background:
-        linear-gradient(
-          180deg,
-          rgba(15,23,42,1),
-          rgba(2,6,23,1)
-        );
-
-      border:
-        1px solid rgba(255,255,255,0.08);
+      background: linear-gradient(180deg, rgba(15,23,42,1), rgba(2,6,23,1));
+      border: 1px solid rgba(255,255,255,0.08);
     }
-
 
     .banca-link:hover {
-      transform:
-        translateY(-8px)
-        scale(1.02);
-
-      border-color:
-        rgba(250,204,21,0.7);
-
-      box-shadow:
-        0 15px 40px
-        rgba(250,204,21,0.18),
-
-        0 0 25px
-        rgba(250,204,21,0.12);
+      transform: translateY(-8px) scale(1.02);
+      border-color: rgba(250,204,21,0.7);
+      box-shadow: 0 15px 40px rgba(250,204,21,0.18), 0 0 25px rgba(250,204,21,0.12);
     }
-
 
     .banca-link::before {
       content: '';
-
       position: absolute;
-
-      top: 0;
-      left: -120%;
-
-      width: 100%;
-      height: 100%;
-
-      background:
-        linear-gradient(
-          120deg,
-          transparent,
-          rgba(255,255,255,0.08),
-          transparent
-        );
-
+      top: 0; left: -120%;
+      width: 100%; height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.08), transparent);
       transition: 0.8s;
     }
 
+    .banca-link:hover::before { left: 120%; }
 
-    .banca-link:hover::before {
-      left: 120%;
-    }
+    .banca-link h3 { font-size: 32px; color: #facc15; margin-bottom: 15px; }
 
-
-    .banca-link h3 {
-      font-size: 32px;
-
-      color: #facc15;
-
-      margin-bottom: 15px;
-    }
-
-
-    .banca-link p {
-      color: #cbd5e1;
-
-      line-height: 1.6;
-
-      font-size: 17px;
-    }
-
+    .banca-link p { color: #cbd5e1; line-height: 1.6; font-size: 17px; }
 
     .banca-btn {
       margin-top: 30px;
-
       display: flex;
-
       align-items: center;
-
       justify-content: center;
-
-      background:
-        linear-gradient(
-          45deg,
-          #facc15,
-          #f59e0b
-        );
-
+      background: linear-gradient(45deg, #facc15, #f59e0b);
       color: #000;
-
       font-weight: bold;
-
       font-size: 16px;
-
       padding: 15px 20px;
-
       border-radius: 12px;
-
       transition: 0.3s;
     }
 
+    .banca-link:hover .banca-btn { transform: scale(1.03); }
 
-    .banca-link:hover .banca-btn {
-      transform: scale(1.03);
-    }
-
-
-    /* =========================
-       IFRAME
-    ========================== */
-
+    /* IFRAME */
     .iframe-wrapper {
       margin-top: 40px;
-
       border-radius: 24px;
-
       overflow: hidden;
-
-      border:
-        1px solid rgba(255,255,255,0.08);
-
-      box-shadow:
-        0 20px 60px
-        rgba(0,0,0,0.4);
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
     }
 
+    .iframe-section iframe { width: 100%; height: 850px; border: none; background: #fff; }
 
-    .iframe-section iframe {
-      width: 100%;
-
-      height: 850px;
-
-      border: none;
-
-      background: #fff;
-    }
-
-
-    .iframe-buttons {
-      margin-top: 25px;
-
-      display: flex;
-
-      gap: 20px;
-
-      justify-content: center;
-
-      flex-wrap: wrap;
-    }
-
+    .iframe-buttons { margin-top: 25px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
 
     .iframe-buttons button,
     .iframe-buttons a {
-      background:
-        linear-gradient(
-          45deg,
-          #facc15,
-          #f59e0b
-        );
-
+      background: linear-gradient(45deg, #facc15, #f59e0b);
       color: #000;
-
       padding: 14px 28px;
-
       border-radius: 12px;
-
       border: none;
-
       font-weight: bold;
-
       text-decoration: none;
-
       cursor: pointer;
-
       transition: 0.3s;
     }
 
-
     .iframe-buttons button:hover,
-    .iframe-buttons a:hover {
-      transform: translateY(-3px);
+    .iframe-buttons a:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(250,204,21,0.4); }
 
-      box-shadow:
-        0 10px 25px
-        rgba(250,204,21,0.4);
-    }
+    /* FAQ */
+    .faq-item { margin-bottom: 30px; }
 
+    .faq-item h3 { color: var(--primary); margin-bottom: 10px; font-size: 24px; }
 
-    /* =========================
-       FAQ
-    ========================== */
+    .faq-item p { color: #cbd5e1; }
 
-    .faq-item {
-      margin-bottom: 30px;
-    }
-
-
-    .faq-item h3 {
-      color: var(--primary);
-
-      margin-bottom: 10px;
-
-      font-size: 24px;
-    }
-
-
-    .faq-item p {
-      color: #cbd5e1;
-    }
-
-
-    /* =========================
-       FOOTER
-    ========================== */
-
+    /* FOOTER */
     footer {
       padding: 40px 20px;
-
       text-align: center;
-
       background: #010409;
-
-      border-top:
-        1px solid rgba(255,255,255,0.08);
+      border-top: 1px solid rgba(255,255,255,0.08);
     }
 
+    footer p { color: #94a3b8; }
 
-    footer p {
-      color: #94a3b8;
+    /* BOTAO INSTALAR APP */
+    #btn-instalar {
+      display: none;
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 9999;
+      background: linear-gradient(45deg, #facc15, #f59e0b);
+      color: #000;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 14px 24px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
     }
 
+    #aviso-instalar {
+      display: none;
+      position: fixed;
+      left: 15px;
+      right: 15px;
+      bottom: 80px;
+      z-index: 9999;
+      background: #fff;
+      color: #000;
+      padding: 16px;
+      border-radius: 12px;
+      font-size: 15px;
+      line-height: 1.5;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
 
-    /* =========================
-       RESPONSIVO
-    ========================== */
+    #aviso-instalar button {
+      margin-top: 10px;
+      background: #000;
+      color: #fff;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
 
+    /* RESPONSIVO */
     @media (max-width: 768px) {
-
-      .hero h1 {
-        font-size: 42px;
-      }
-
-
-      .hero p {
-        font-size: 18px;
-      }
-
-
-      .menu {
-        display: none;
-      }
-
-
-      h2 {
-        font-size: 34px;
-      }
-
-
-      .iframe-section iframe {
-        height: 650px;
-      }
-
-
-      .banca-link {
-        min-height: auto;
-      }
-
-
-      .banca-link h3 {
-        font-size: 26px;
-      }
-
+      .hero h1 { font-size: 42px; }
+      .hero p { font-size: 18px; }
+      .menu { display: none; }
+      h2 { font-size: 34px; }
+      .iframe-section iframe { height: 650px; }
+      .banca-link { min-height: auto; }
+      .banca-link h3 { font-size: 26px; }
     }
-
   </style>
 
 </head>
@@ -723,82 +332,35 @@
 
 <body>
 
-
-  <!-- ==================================================
-       GOOGLE TAG MANAGER - TAG 2
-       COLOCADA LOGO DEPOIS DO <body>
-       ID: GTM-NBHWRN3L
-  =================================================== -->
-
   <!-- Google Tag Manager (noscript) -->
   <noscript>
-
-    <iframe
-      src="https://www.googletagmanager.com/ns.html?id=GTM-NBHWRN3L"
-      height="0"
-      width="0"
-      style="display:none;visibility:hidden"
-    ></iframe>
-
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBHWRN3L" height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-
-  <!-- =========================
-       HEADER
-  ========================== -->
-
   <header>
-
     <div class="container">
-
       <nav>
-
-        <div class="logo">
-          Super Acertos
-        </div>
-
+        <div class="logo">Super Acertos</div>
 
         <div class="menu">
-
-          <a href="#cotacoes">
-            Cotações
-          </a>
-
-          <a href="#bonus">
-            Bônus
-          </a>
-
-          <a href="#bancas">
-            Bancas
-          </a>
-
-          <a href="#faq">
-            FAQ
-          </a>
-
+          <a href="#cotacoes">Cotações</a>
+          <a href="#bonus">Bônus</a>
+          <a href="#bancas">Bancas</a>
+          <a href="#faq">FAQ</a>
         </div>
-
       </nav>
-
     </div>
-
   </header>
 
 
-  <!-- =========================
-       HERO
-  ========================== -->
-
   <section class="hero">
-
     <div class="container">
 
       <h1>
         A Melhor banca do Brasil<br>
         Superacertos
       </h1>
-
 
       <p>
         A Super Acertos é uma das principais
@@ -808,7 +370,6 @@
         rápida e segura para os jogadores.
         Plataforma simplificada para loterias.
       </p>
-
 
       <a
         href="https://app.superacertos.club/pr/Vn9qOT6U"
@@ -820,100 +381,45 @@
       </a>
 
     </div>
-
   </section>
 
 
-  <!-- =========================
-       COTAÇÕES
-  ========================== -->
-
   <section id="cotacoes">
-
     <div class="container">
 
-      <h2>
-        Cotação da Superacertos
-      </h2>
-
+      <h2>Cotação da Superacertos</h2>
 
       <div class="grid">
 
-
         <div class="card">
-
-          <h3>
-            Milhar
-          </h3>
-
-          <p>
-            R$ 8.000,00
-          </p>
-
+          <h3>Milhar</h3>
+          <p>R$ 8.000,00</p>
         </div>
 
-
         <div class="card">
-
-          <h3>
-            Centena
-          </h3>
-
-          <p>
-            R$ 800,00
-          </p>
-
+          <h3>Centena</h3>
+          <p>R$ 800,00</p>
         </div>
 
-
         <div class="card">
-
-          <h3>
-            Dezena
-          </h3>
-
-          <p>
-            R$ 80,00
-          </p>
-
+          <h3>Dezena</h3>
+          <p>R$ 80,00</p>
         </div>
 
-
         <div class="card">
-
-          <h3>
-            Grupo
-          </h3>
-
-          <p>
-            R$ 20,00
-          </p>
-
+          <h3>Grupo</h3>
+          <p>R$ 20,00</p>
         </div>
-
 
       </div>
-
     </div>
-
   </section>
 
 
-  <!-- =========================
-       BONUS
-  ========================== -->
-
-  <section
-    class="bonus"
-    id="bonus"
-  >
-
+  <section class="bonus" id="bonus">
     <div class="container">
 
-      <h2>
-        Ganhe 30% cadastro novos
-      </h2>
-
+      <h2>Ganhe 30% cadastro novos</h2>
 
       <p class="section-text">
         Deposite até R$ 500 reais e ganhe
@@ -921,265 +427,113 @@
       </p>
 
     </div>
-
   </section>
 
 
-  <!-- =========================
-       BANCAS
-  ========================== -->
-
   <section id="bancas">
-
     <div class="container">
 
-      <h2>
-        Bancas Apoiadoras
-      </h2>
-
+      <h2>Bancas Apoiadoras</h2>
 
       <div class="grid bancas-grid">
 
-
-        <a
-          href="https://app.superacertos.club/pr/Vn9qOT6U"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="card banca-link"
-        >
-
-          <h3>
-            Águia Oficial
-          </h3>
-
-          <p>
-            Tradição, segurança e as melhores
-            cotações para você.
-          </p>
-
-          <span class="banca-btn">
-            ACESSAR AGORA
-          </span>
-
+        <a href="https://app.superacertos.club/pr/Vn9qOT6U" target="_blank" rel="noopener noreferrer" class="card banca-link">
+          <h3>Águia Oficial</h3>
+          <p>Tradição, segurança e as melhores cotações para você.</p>
+          <span class="banca-btn">ACESSAR AGORA</span>
         </a>
 
-
-        <a
-          href="https://app.acertos.club/pr/JcsF2PpU"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="card banca-link"
-        >
-
-          <h3>
-            Acertos Club
-          </h3>
-
-          <p>
-            Confiança e agilidade para
-            a sua melhor experiência.
-          </p>
-
-          <span class="banca-btn">
-            ACESSAR AGORA
-          </span>
-
+        <a href="https://app.acertos.club/pr/JcsF2PpU" target="_blank" rel="noopener noreferrer" class="card banca-link">
+          <h3>Acertos Club</h3>
+          <p>Confiança e agilidade para a sua melhor experiência.</p>
+          <span class="banca-btn">ACESSAR AGORA</span>
         </a>
 
-
-        <a
-          href="https://vaidarboa.vip/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="card banca-link"
-        >
-
-          <h3>
-            Vaidarboa
-          </h3>
-
-          <p>
-            A banca que mais cresce
-            e mais paga no Brasil.
-          </p>
-
-          <span class="banca-btn">
-            ACESSAR AGORA
-          </span>
-
+        <a href="https://vaidarboa.vip/" target="_blank" rel="noopener noreferrer" class="card banca-link">
+          <h3>Vaidarboa</h3>
+          <p>A banca que mais cresce e mais paga no Brasil.</p>
+          <span class="banca-btn">ACESSAR AGORA</span>
         </a>
 
-
-        <a
-          href="https://app.superbancas.club/pr/3IMRdWnG"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="card banca-link"
-        >
-
-          <h3>
-            Superacertos
-          </h3>
-
-          <p>
-            A banca que mais cresce
-            no Brasil está aqui.
-          </p>
-
-          <span class="banca-btn">
-            ACESSAR AGORA
-          </span>
-
+        <a href="https://app.superbancas.club/pr/3IMRdWnG" target="_blank" rel="noopener noreferrer" class="card banca-link">
+          <h3>Superacertos</h3>
+          <p>A banca que mais cresce no Brasil está aqui.</p>
+          <span class="banca-btn">ACESSAR AGORA</span>
         </a>
-
 
       </div>
-
     </div>
-
   </section>
 
 
-  <!-- =========================
-       IFRAME
-  ========================== -->
-
   <section class="iframe-section">
-
     <div class="container">
 
-      <h2>
-        Plataforma Oficial
-      </h2>
-
+      <h2>Plataforma Oficial</h2>
 
       <p class="section-text">
         Acesse agora a plataforma oficial
         da Super Acertos.
       </p>
 
-
       <div class="iframe-wrapper">
-
         <iframe
           id="superbancas-frame"
-
           loading="lazy"
-
           src="https://app.superacertos.club/pr/Vn9qOT6U"
-
           title="Super Acertos Plataforma"
-
-          allow="
-            clipboard-read;
-            clipboard-write;
-            fullscreen;
-            autoplay;
-            payment;
-            geolocation;
-            microphone;
-            camera;
-            display-capture;
-          "
-
+          allow="clipboard-read; clipboard-write; fullscreen; autoplay; payment; geolocation; microphone; camera; display-capture;"
           allowfullscreen
-
-          sandbox="
-            allow-same-origin
-            allow-scripts
-            allow-popups
-            allow-forms
-            allow-downloads
-            allow-modals
-            allow-presentation
-            allow-top-navigation-by-user-activation
-          "
-
+          sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-downloads allow-modals allow-presentation allow-top-navigation-by-user-activation"
           referrerpolicy="strict-origin-when-cross-origin"
         ></iframe>
-
       </div>
-
 
       <div class="iframe-buttons">
+        <button id="reload-frame">Recarregar Plataforma</button>
 
-        <button id="reload-frame">
-          Recarregar Plataforma
-        </button>
-
-
-        <a
-          href="https://app.superacertos.club/pr/Vn9qOT6U"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://app.superacertos.club/pr/Vn9qOT6U" target="_blank" rel="noopener noreferrer">
           Abrir em Nova Aba
         </a>
-
       </div>
 
     </div>
-
   </section>
 
-
-  <!-- =========================
-       FAQ
-  ========================== -->
 
   <section id="faq">
-
     <div class="container">
 
-      <h2>
-        Perguntas Frequentes
-      </h2>
-
+      <h2>Perguntas Frequentes</h2>
 
       <div class="faq-item">
-
-        <h3>
-          Como funciona o bônus em dias de federais?
-        </h3>
-
-        <p>
-          Toda quarta-feira e sábado,
-          bônus de 20% na primeira recarga.
-        </p>
-
+        <h3>Como funciona o bônus em dias de federais?</h3>
+        <p>Toda quarta-feira e sábado, bônus de 20% na primeira recarga.</p>
       </div>
 
-
       <div class="faq-item">
-
-        <h3>
-          O pagamento é rápido?
-        </h3>
-
-        <p>
-          Sim. A plataforma possui pagamentos
-          ágeis e sistema simplificado.
-        </p>
-
+        <h3>O pagamento é rápido?</h3>
+        <p>Sim. A plataforma possui pagamentos ágeis e sistema simplificado.</p>
       </div>
 
     </div>
-
   </section>
 
 
-  <!-- =========================
-       FOOTER
-  ========================== -->
-
   <footer>
-
-    <p>
-      © 2026 SuperAcertos.club -
-      Todos os direitos reservados
-    </p>
-
+    <p>© 2026 SuperAcertos.club - Todos os direitos reservados</p>
   </footer>
+
+
+  <!-- =========================
+       BOTAO INSTALAR APP
+  ========================== -->
+  <button id="btn-instalar" type="button">📲 Instalar App</button>
+
+  <div id="aviso-instalar">
+    <span id="aviso-texto"></span><br>
+    <button id="aviso-fechar" type="button">Entendi</button>
+  </div>
 
 
   <!-- =========================
@@ -1187,29 +541,80 @@
   ========================== -->
 
   <script>
+    var iframe = document.getElementById('superbancas-frame');
+    var reloadBtn = document.getElementById('reload-frame');
 
-    const iframe =
-      document.getElementById(
-        'superbancas-frame'
-      );
-
-
-    const reloadBtn =
-      document.getElementById(
-        'reload-frame'
-      );
-
-
-    reloadBtn.addEventListener(
-      'click',
-      function() {
-
-        iframe.src = iframe.src;
-
-      }
-    );
-
+    reloadBtn.addEventListener('click', function() {
+      iframe.src = iframe.src;
+    });
   </script>
+
+  <script>
+    // 1) Registra o service worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/service-worker.js').catch(function (err) {
+          console.log('Erro no service worker:', err);
+        });
+      });
+    }
+
+    // 2) Botao de instalar
+    var eventoInstalar = null;
+    var btnInstalar = document.getElementById('btn-instalar');
+    var aviso = document.getElementById('aviso-instalar');
+    var avisoTexto = document.getElementById('aviso-texto');
+
+    var jaInstalado =
+      window.navigator.standalone === true ||
+      window.matchMedia('(display-mode: standalone)').matches;
+
+    var ehIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+
+    // Esconde o botao se o app ja estiver instalado
+    if (!jaInstalado) {
+      btnInstalar.style.display = 'block';
+    }
+
+    // Chrome/Edge: guarda o evento de instalacao
+    window.addEventListener('beforeinstallprompt', function (e) {
+      e.preventDefault();
+      eventoInstalar = e;
+    });
+
+    window.addEventListener('appinstalled', function () {
+      btnInstalar.style.display = 'none';
+      aviso.style.display = 'none';
+      eventoInstalar = null;
+    });
+
+    btnInstalar.addEventListener('click', function () {
+      // Caso ideal: abre a janela de instalacao do navegador
+      if (eventoInstalar) {
+        eventoInstalar.prompt();
+        eventoInstalar.userChoice.then(function () {
+          eventoInstalar = null;
+          btnInstalar.style.display = 'none';
+        });
+        return;
+      }
+
+      // Alternativa: mostra instrucoes manuais
+      if (ehIOS) {
+        avisoTexto.innerHTML =
+          'No iPhone: toque em <strong>Compartilhar</strong> (quadrado com seta) e depois em <strong>Adicionar à Tela de Início</strong>.';
+      } else {
+        avisoTexto.innerHTML =
+          'Toque no menu <strong>⋮</strong> do navegador e escolha <strong>Instalar app</strong> ou <strong>Adicionar à tela inicial</strong>.';
+      }
+      aviso.style.display = 'block';
+    });
+
+    document.getElementById('aviso-fechar').addEventListener('click', function () {
+      aviso.style.display = 'none';
+    });
+  </script>
+
 <script data-cfasync="false" src="https://bauval.org/14/5614a836c8122e4c4ee3c93575034002"></script>
 
 </body>
